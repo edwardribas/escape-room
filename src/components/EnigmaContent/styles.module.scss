@@ -1,0 +1,32 @@
+.wrapper{
+    width: 90%;
+    margin: 50px auto 0;
+    padding: 30px 25px;
+
+    h1, h2, p, img{
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        color: #4BE476;
+    }
+
+    p{
+        font-weight: 300;
+        font-size: 1.05rem;
+        line-height: 1.35;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        text-align: justify;
+        color: rgb(230, 230, 230);
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-width: 350px;
+        display: block;
+        user-select: none;
+        border-radius: 4px;
+    }
+}

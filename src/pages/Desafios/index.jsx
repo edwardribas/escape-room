@@ -1,69 +1,78 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MainWrapper } from '../../components/MainWrapper';
 import { EnigmaCard } from '../../components/EnigmaCard';
 import { Loading } from '../../components/Loading';
 import { RiSettings4Fill } from 'react-icons/ri';
 import styles from './styles.module.scss';
+import { Marshmello } from '../../assets/img';
+import { useEnigmasInfo } from '../../hooks/useEnigmasInfo';
 
 export const Desafios = () => {
-    const isEverythingCompleted = false;
-    const storedEscapeRoomInfo = localStorage.getItem('escapeRoomInfo');
-    const [escapeRoomInfo, setEscapeRoomInfo] = useState(false);
-
-    useEffect(() => {
-        if (storedEscapeRoomInfo) {
-            setEscapeRoomInfo(JSON.parse(storedEscapeRoomInfo));
-        } else {
-            localStorage.setItem('escapeRoomInfo', JSON.stringify(
-                [
-                    { test: 1 },
-                    { test: 2 },
-                    { test: 3 },
-                ]
-            ));
-            setEscapeRoomInfo(JSON.parse(storedEscapeRoomInfo));
-        }
-    }, []) // eslint-disable-line
+    const SECRET_CODE = "CODIGO ULTRA SECRETO";
     
-
-    useEffect(() => {
-        console.log(escapeRoomInfo);
-    }, [escapeRoomInfo])
+    const { escapeRoomInfo, isEverythingCompleted, resetGame, currentTask } = useEnigmasInfo();
+    const [isCodeVisible, setCodeVisibility] = useState(false);
+    const Button = useRef();
 
     return (
         <MainWrapper>
             <h1 className={styles.title}>Escape Room</h1>
+            {!isEverythingCompleted && (
+                <p style={{
+                    textAlign: 'center',
+                    marginBottom: 30,
+                    marginTop: '-60px'
+                }}>
+                    Enigma atual: {currentTask}
+                </p>
+            )}
 
             {escapeRoomInfo
                 ? !isEverythingCompleted
                     ? (
                         <div className={styles.enigmas_wrapper}>
-                            <EnigmaCard
-                                icon={<RiSettings4Fill/>}
-                                number={1}
-                                isCompleted={true}
-                                isCurrentPuzzle={false}
-                                link="/1"
-                            />
-                            <EnigmaCard
-                                icon={<RiSettings4Fill/>}
-                                number={2}
-                                isCompleted={true}
-                                isCurrentPuzzle={false}
-                                link="/2"
-                            />
-                            <EnigmaCard
-                                icon={<RiSettings4Fill/>}
-                                number={3}
-                                isCompleted={false}
-                                isCurrentPuzzle={true}
-                                link="/3"
-                            />
+
+                            {escapeRoomInfo.map((e, i) => (
+                                <EnigmaCard
+                                    icon={<RiSettings4Fill/>}
+                                    number={i+1}
+                                    isCompleted={e.isCompleted}
+                                    isCurrentPuzzle={e.isCurrentPuzzle}
+                                    key={i}
+                                    link={e.link}
+                                />
+                            ))}
                         </div>
                     )
                     : (
                         <div className={styles.thanks_banner}>
-                            
+                            <h1>Parabéns aos jogadores!</h1>
+                            <p>
+                                Quem diria que vocês realmente conseguiriam... 
+                                Vocês estarão livres para sair após mostrarem o código para o guardião da sala.
+                            </p>
+
+                            <div className={styles.buttons}>
+                                <button ref={Button} onClick={() => setCodeVisibility(!isCodeVisible)}>
+                                    {!isCodeVisible
+                                        ? "Revelar código"
+                                        : SECRET_CODE}
+                                </button>
+                                {isCodeVisible && (
+                                    <button 
+                                        onClick={() => {
+                                            resetGame();
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        Zerar jogo
+                                    </button>
+                                )}
+                            </div>
+
+                            <div className={styles.illustration}>
+                                <Marshmello/>
+                            </div>
                         </div>
                     )
                 : (

@@ -7,6 +7,7 @@
 
 .title{
     display: inline-block;
+    user-select: none;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -26,5 +27,109 @@
         content: '';
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+.thanks_banner{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #484848;
+    background-color: rgb(39, 39, 39);
+    border-radius: 30px;
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 315px;
+    transition: transform .35s ease;
+
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.1rem;
+        font-weight: 900;
+        color: #fff;
+    }
+
+    p{
+        font-weight: 400;
+        max-width: 600px;
+        color: rgb(220, 220, 220,);
+    }
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+    @media (max-width: 1060px) {
+        padding-top: 80px;
+        margin-top: 30px;
+    }
+}
+
+.illustration{
+    left: -200px;
+    bottom: -50px;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transition: .15s ease;
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 1170px){
+        width: 320px;
+        height: 320px;
+    }
+    @media (max-width: 1060px) {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50px;
+        background-color: #4BE476;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    max-width: 630px;
+
+
+    button{
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid #4BE476;
+        background-color: #4BE476;
+        color: #484848;
+        font-weight: 400;
+        cursor: pointer;
+        font-size: .98rem;
+        outline: none;
+        padding: 12px 20px;
+        border-radius: 30px;
+        transition: background-color .2s ease, color .2s ease;
+
+        &:nth-of-type(2){
+            background-color: transparent;
+            color: #4BE476;
+
+            &:hover{
+                background-color: #4BE476;
+                color: #484848;
+            }
+        }
     }
 }
