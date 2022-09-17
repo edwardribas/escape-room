@@ -1,0 +1,30 @@
+.loading{
+    display: inline-block;
+    margin: 60px auto;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    animation: rotateLoading 2s linear infinite;
+
+    > span{
+        position: absolute;
+        background-color: rgb(29, 29, 29);
+        width: 30px;
+        height: 10px;
+        display: block;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rotateLoading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,19 @@
+.main{
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
+    display: flex;
+    padding: 30px 25px;
+    flex-direction: column;
+    animation: fadeIn .2s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: .4;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Outfit', sans-serif;
+}
+
+html, body{
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+    color: rgb(200, 200, 200);
+}
+
+::selection{
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    border: 3px solid rgb(29, 29, 29);
+    background-color: rgb(50, 50, 50);
+    border-radius: 50px;
+}

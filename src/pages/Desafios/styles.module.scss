@@ -1,0 +1,30 @@
+.enigmas_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px 30px;
+}
+
+.title{
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: rgb(230, 230, 230);
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 2rem;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        bottom: -15px;
+        width: 60%;
+        height: 3px;
+        border-radius: 30px;
+        background-color: #4BE476;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
