@@ -20,7 +20,8 @@ export const Desafios = () => {
                     { test: 2 },
                     { test: 3 },
                 ]
-            ))
+            ));
+            setEscapeRoomInfo(JSON.parse(storedEscapeRoomInfo));
         }
     }, []) // eslint-disable-line
     
