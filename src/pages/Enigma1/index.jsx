@@ -2,18 +2,24 @@ import React from 'react';
 import { MainWrapper } from '../../components/MainWrapper';
 import { EnigmaContent } from '../../components/EnigmaContent';
 import { Title } from '../../components/Title';
+import styles from './styles.module.scss';
 
 export const Enigma1 = () => {
     return (
         <MainWrapper>
-            <Title title="Enigma 1" enigma={1} answer="enigma1"/>
+            <Title title="Enigma 1" enigma={1} answer="t9jlk10jmnamlwebkit9loop"/>
             <EnigmaContent>
-                <h1>Exemplar h1</h1>
-                <h2>Exemplar h2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, voluptatibus error sapiente, quod quia aliquam dolorum saepe veritatis officiis aut veniam laboriosam ut assumenda molestiae, animi magni necessitatibus placeat quidem maiores. Vero fugit expedita nemo tenetur culpa a dolorem quod. Quibusdam dolore enim obcaecati eaque eligendi ut commodi autem! Culpa repellendus neque dolorum quibusdam repudiandae quos inventore magnam natus quaerat id. Quae ducimus eaque fugit nobis unde ab reprehenderit asperiores inventore animi ad. Recusandae illo hic ducimus ratione accusamus mollitia, alias assumenda qui animi ullam omnis ab voluptate quam pariatur dicta cum exercitationem totam asperiores commodi? Consequatur totam non vero!
+                <p className={styles.hidden}>
+                    Que tal iniciarmos com um jogo de adivinhação para termos um bom começo?
                 </p>
-                <img src="https://via.placeholder.com/200" alt="Placeholder"/>
+                <p className={styles.hidden}>
+                    <span>É totalmente imóvel quando você não está por perto.</span>
+                    <span>Costuma fazer mais barulho do que gato na madrugada.</span>
+                    <span>Faz parte do dia do developer.</span>
+                </p>
+                <p className={styles.hidden}>
+                    <b>Será que vocês conseguem adivinhar?</b>
+                </p>
             </EnigmaContent>
         </MainWrapper>
     )

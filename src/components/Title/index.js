@@ -14,7 +14,7 @@ export const Title = ({enigma, title, answer}) => {
     window.onkeydown = (e) => {
         if (Input.current && Input.current.value) {
             const isFocused = Input.current === document.activeElement;
-            const isCorrect = Input.current.value === answer;
+            const isCorrect = Input.current.value.toLowerCase() === answer.toLowerCase();
             
             if (e.key === "Enter" && isFocused) {
                 if (isCorrect) {

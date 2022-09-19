@@ -1,0 +1,17 @@
+p.hidden{
+    cursor: default;
+    max-width: 470px;
+    margin: 0 auto 30px;
+    color: rgb(29, 29, 29);
+    text-align: center;
+    
+    *::selection, &::selection{
+        background-color: transparent;
+        color: #4be476;
+    }
+    span{
+        display: block;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
