@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 export const Enigma1 = () => {
     return (
         <MainWrapper>
-            <Title title="Enigma 1" enigma={1} answer="t9jlk10jmnamlwebkit9loop"/>
+            <Title title="Enigma 1" enigma={1} answer="jklm980"/>
             <EnigmaContent>
                 <p className={styles.hidden}>
                     Que tal iniciarmos com um jogo de adivinhação para termos um bom começo?

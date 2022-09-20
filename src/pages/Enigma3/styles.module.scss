@@ -1,0 +1,10 @@
+p.text{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 200;
+
+    &:last-of-type{
+        font-weight: 500;
+        color: #4BE476;
+    }
+}

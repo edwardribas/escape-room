@@ -2,18 +2,19 @@ import React from 'react';
 import { MainWrapper } from '../../components/MainWrapper';
 import { EnigmaContent } from '../../components/EnigmaContent';
 import { Title } from '../../components/Title';
+import styles from './styles.module.scss';
 
 export const Enigma3 = () => {
     return (
-        <MainWrapper>
-            <Title title="Enigma 3" enigma={3} answer="enigma3"/>
+        <MainWrapper className={styles.wrapper}>
+            <Title title="Enigma 3" enigma={3} answer="76buzwu"/>
             <EnigmaContent>
-                <h1>Exemplar h1</h1>
-                <h2>Exemplar h2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, voluptatibus error sapiente, quod quia aliquam dolorum saepe veritatis officiis aut veniam laboriosam ut assumenda molestiae, animi magni necessitatibus placeat quidem maiores. Vero fugit expedita nemo tenetur culpa a dolorem quod. Quibusdam dolore enim obcaecati eaque eligendi ut commodi autem! Culpa repellendus neque dolorum quibusdam repudiandae quos inventore magnam natus quaerat id. Quae ducimus eaque fugit nobis unde ab reprehenderit asperiores inventore animi ad. Recusandae illo hic ducimus ratione accusamus mollitia, alias assumenda qui animi ullam omnis ab voluptate quam pariatur dicta cum exercitationem totam asperiores commodi? Consequatur totam non vero!
-                </p>
-                <img src="https://via.placeholder.com/200" alt="Placeholder"/>
+                <p className={styles.text}>Não iríamos existir sem esse elemento,</p>
+                <p className={styles.text}>e também nem sequer conseguiríamos nos manter vivos sem respirar do outro elemento...</p>
+                <p className={styles.text}>Você tem ambos dentro de seu corpo, mas não sente...</p>
+                <p className={styles.text}>Você utiliza eles em boa parte das coisas que faz.</p>
+                <p className={styles.text}>As coisas que você come, bebe e produz contêm a junção desses dois.</p>
+                <p className={styles.text}>Você sabe do que eu estou falando!</p>
             </EnigmaContent>
         </MainWrapper>
     )

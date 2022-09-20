@@ -8,7 +8,7 @@ import { Marshmello } from '../../assets/img';
 import { useEnigmasInfo } from '../../hooks/useEnigmasInfo';
 
 export const Desafios = () => {
-    const SECRET_CODE = "CODIGO ULTRA SECRETO";
+    const SECRET_CODE = "ANDERSON SHOW";
     
     const { escapeRoomInfo, isEverythingCompleted, resetGame, currentTask } = useEnigmasInfo();
     const [isCodeVisible, setCodeVisibility] = useState(false);

@@ -1,0 +1,11 @@
+p.text{
+    cursor: default;
+    max-width: 470px;
+    margin: 0 auto 10px;
+    text-align: center;
+    color: #4be476;
+
+    &:last-of-type{
+        font-weight: 600;
+    }
+}

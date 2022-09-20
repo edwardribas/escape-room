@@ -9,19 +9,15 @@ export const Title = ({enigma, title, answer}) => {
     const { updateEscapeRoom } = useEnigmasInfo();
     const navigate = useNavigate();
     const [isInputVisible, setInputVisibility] = useState(false);
-    const Input = useRef();
+    const InputBox = useRef();
 
     window.onkeydown = (e) => {
-        if (Input.current && Input.current.value) {
-            const isFocused = Input.current === document.activeElement;
-            const isCorrect = Input.current.value.toLowerCase() === answer.toLowerCase();
+        if (InputBox.current && InputBox.current.value) {
+            const isFocused = InputBox.current === document.activeElement;
+            const isCorrect = InputBox.current.value.toLowerCase() === answer.toLowerCase();
             
-            if (e.key === "Enter" && isFocused) {
-                if (isCorrect) {
-                    updateEscapeRoom(enigma);
-                }
-                // ! Devolutiva pro usuário em caso de erro
-            }
+            if (e.key === "Enter" && isFocused && isCorrect)
+                updateEscapeRoom(enigma);
         }
     }
 
@@ -38,11 +34,11 @@ export const Title = ({enigma, title, answer}) => {
                 <input
                     placeholder='Sua resposta'
                     className={isInputVisible ? styles.active : undefined}
-                    ref={Input}
+                    ref={InputBox}
                 />
                 <span
                     className={styles.icon}
-                    onClick={() => setInputVisibility(!isInputVisible)}
+                    onClick={() => setInputVisibility(!isInputVisible) }
                 >
                     <BsChatFill/>
                 </span>
