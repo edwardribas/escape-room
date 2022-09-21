@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 export const Enigma3 = () => {
     return (
         <MainWrapper className={styles.wrapper}>
-            <Title title="Enigma 3" enigma={3} answer="76buzwu"/>
+            <Title title="Enigma 3" enigma={3} answer="kine220222"/>
             <EnigmaContent>
                 <p className={styles.text}>Não iríamos existir sem esse elemento,</p>
                 <p className={styles.text}>e também nem sequer conseguiríamos nos manter vivos sem respirar do outro elemento...</p>
