@@ -10,7 +10,7 @@ export const Enigma4 = () => {
     }, [])
     return (
         <MainWrapper>
-            <Title title="Enigma 4" enigma={4} answer="enigma4"/>
+            <Title title="Enigma 4" enigma={4} answer="nicolau kardash"/>
             <EnigmaContent>
                 <p className={styles.text}>Nesse lugar você não encontra êxitos, apenas erros.</p>
                 <p className={styles.text}>É utilizado para te atentar com os problemas que você tem,</p>
