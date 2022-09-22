@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 export const Enigma4 = () => {
     useEffect(() => {
-        console.log('%cEle não é deste planeta, mas para chamá-lo, basta dizer...', 'color: #4be476')
+        console.log('%cEle não é deste planeta, possui uma obsessão descomunal por bolinhas de hortelã.', 'color: #4be476')
     }, [])
     return (
         <MainWrapper>
